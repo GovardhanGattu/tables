@@ -16,19 +16,17 @@
 		margin-left:auto;
 		margin-right:auto;
 		padding:10px; 
-		overflow:hidden;
-	}
+		}
     	.container{
+    	
+    		resize: all;
     		
-    		margin:all;
-    		resize: vertical;
-    		
-    		font-size: 28;
+    		font-size: 32;
     	}
 
-    	h{
+    	hgroup{
     		font-size: 40;
-    		overflow: hidden;
+    		
     		font-color: black;
     	}
 </style>
@@ -44,7 +42,7 @@
 
 
 		</h2>
-		<h><a href="{% url 'select' %}">Select</a></h>
+		<hgroup><a href="{% url 'select' %}">Select</a></hgroup>
 	</div>
 </body>
 
