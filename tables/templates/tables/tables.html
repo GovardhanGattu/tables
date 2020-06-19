@@ -3,6 +3,8 @@
 <html>
 <head>
 	<title>my tables</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <style type="text/css">
     	
@@ -16,17 +18,13 @@
 		padding:10px; 
 		overflow:hidden;
 	}
-    	h2{
-    		width:20%;
-    		border-width: 10px;
-    		border-color: black;
-    		border-style: solid;
-    		padding-left: 40px;
-    		margin-left: auto;
-    		margin-right: auto;
-    		margin-top:50px;
-    		font-size: 32;
+    	.container{
+    		
+    		margin:all;
+    		
+    		font-size: 28;
     	}
+
     	h{
     		font-size: 40;
     		overflow: hidden;
@@ -36,7 +34,7 @@
 </head>
 
 <body>
-
+		<div class="container" align="center">
 		<h2>
 			{% load mathfilters %}
 				{% for x in info.range %}
@@ -45,7 +43,8 @@
 
 
 		</h2>
-		<center><h><a href="{% url 'select' %}">Select</a></h></center>
+		<h><a href="{% url 'select' %}">Select</a></h>
+	</div>
 </body>
 
 </html>
