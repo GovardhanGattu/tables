@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select page</title>
+	<style type="text/css">
+	body{
+
+    	font-family:Arila,sans-serif;
+		background-image: url("https://previews.123rf.com/images/yphotoland/yphotoland1707/yphotoland170700134/85249062-black-lamps-is-shining-orange-light-on-red-brick-wall-for-background-texture-.jpg");
+		color:black;
+		margin-left:auto;
+		margin-right:auto;
+		padding-top:320px; 
+		padding-left: 150px;
+		overflow:hidden;
+	}
+	hgroup{
+		background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/50/Black_colour.jpg");
+		color:white;
+		background-repeat: no-repeat;
+  		background-size: 400px 500px;
+  		/*background-attachment: fixed;*/
+  		background-position: 50% 50%;
+  		padding:10px; 
+  		opacity: 0.7;
+  	
+    
+      
+	}
+	</style>
+</head>
+<body>
+	<center>
+		<hgroup>
+		<h1>Select your table number</h1>
+		<form action="{% url 'tables' %}" method="POST">
+			{% csrf_token %}
+			Number:<input type="text" name="number"><br><br>
+			<input type="submit" name="submit">
+			
+		</form>
+	</hgroup>
+	</center>
+
+</body>
+</html>

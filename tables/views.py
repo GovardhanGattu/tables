@@ -5,10 +5,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def tables(request , num):
-	data = { 'res': num , 'range':range(1,11) }
+def tables(request):
+	if request.method == "POST":
+		num=request.POST.get("number")
+		data = { 'res': num , 'range':range(1,11) }
 
 	return render(request,'tables/tables.html',{'info':data})
 
-def add(request):
-	return render(request,'tables/add.hmtl')
+def select(request):
+	return render(request,'tables/select.html')

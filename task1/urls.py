@@ -19,6 +19,6 @@ from tables import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tables/''<str:num>/',views.tables),
-    path('add/',views.tables),
+    path('tables/',views.tables,name='tables'),
+    path('select/',views.select,name='select'),
 ]
