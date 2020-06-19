@@ -38,8 +38,8 @@
 		<h1>Select your table number</h1>
 		<form action="{% url 'tables' %}" method="POST">
 			{% csrf_token %}
-			Number:<input type="text" name="number"><br><br>
-			<input type="submit" name="submit">
+			{{form}}<br>
+			<pre>       <input type="submit" name="submit"></pre>
 			
 		</form>
 	</hgroup>

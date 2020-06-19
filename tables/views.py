@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from tables.models import Table
+from tables.forms import Mytable
 
 
 # Create your views here.
@@ -13,4 +14,5 @@ def tables(request):
 	return render(request,'tables/tables.html',{'info':data})
 
 def select(request):
-	return render(request,'tables/select.html')
+	form=Mytable()
+	return render(request,'tables/select.html',{'form':form})
